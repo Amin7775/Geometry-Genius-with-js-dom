@@ -44,6 +44,7 @@
             <input id="triangleHeight" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="h">
             <span>cm</span>
           </div>
+          <!-- display -->
           <div class="mb-3">
             <p>Area: <span id="display-area"></span> cm<sup>2</sup></p>
           </div>
@@ -57,16 +58,20 @@
         <figure class="pt-12 px-7"><img src="./images/rectangle.png" alt="Shoes" /></figure>
         <div class="card-body">
           <h2 class="card-title justify-center text-2xl font-semibold">Rectangle</h2>
-          <p class="text-center">Area (A) =  w X I</p>
-          <div class="flex gap-2 justify-center mt-4 mb-6">
+          <p class="text-center">Area (A) =  W X L</p>
+          <div class="flex gap-2 justify-center mt-4 mb-2">
 
-            <input class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="b">
+            <input id="rectangle-width" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="w">
             <span>cm</span>
-            <input class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="h">
+            <input id="rectangle-length" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="l">
             <span>cm</span>
           </div>
+          <!-- display -->
+          <div class="mb-3">
+            <p>Area: <span id="rectangle-area"></span> cm<sup>2</sup></p>
+          </div>
           <div class="card-actions">
-            <button class="btn btn-primary w-full bg-[#1090D8] hover:bg-[#1090D8]/[.9] text-white border-none text-xl font-medium">Calculate</button>
+            <button onclick="calculateRectangle()" class="btn btn-primary w-full bg-[#1090D8] hover:bg-[#1090D8]/[.9] text-white border-none text-xl font-medium">Calculate</button>
           </div>
         </div>
       </div>
@@ -75,16 +80,20 @@
         <figure class="pt-12 px-7"><img src="./images/parallelogram.png" alt="Shoes" /></figure>
         <div class="card-body">
           <h2 class="card-title justify-center text-2xl font-semibold">Parallelogram</h2>
-          <p class="text-center">Area (A) = 0.5 X b X h</p>
-          <div class="flex gap-2 justify-center mt-4 mb-6">
+          <p class="text-center">Area (A) = b X h</p>
+          <div class="flex gap-2 justify-center mt-4 mb-2">
 
-            <input class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="b">
+            <input id="parallelogram-base" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="b">
             <span>cm</span>
-            <input class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="h">
+            <input id="parallelogram-height" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="h">
             <span>cm</span>
           </div>
+          <!-- display -->
+          <div class="mb-3">
+            <p>Area: <span id="parallelogram-area"></span> cm<sup>2</sup></p>
+          </div>
           <div class="card-actions">
-            <button class="btn btn-primary w-full bg-[#1090D8] hover:bg-[#1090D8]/[.9] text-white border-none text-xl font-medium">Calculate</button>
+            <button onclick="calculateParallelogram()" class="btn btn-primary w-full bg-[#1090D8] hover:bg-[#1090D8]/[.9] text-white border-none text-xl font-medium">Calculate</button>
           </div>
         </div>
       </div>
@@ -93,16 +102,20 @@
         <figure class="pt-12 px-7"><img src="./images/rhombus.png" alt="Shoes" /></figure>
         <div class="card-body">
           <h2 class="card-title justify-center text-2xl font-semibold">Rhombus</h2>
-          <p class="text-center">Area (A) = 0.5 X b X h</p>
-          <div class="flex gap-2 justify-center mt-4 mb-6">
+          <p class="text-center">Area (A) = 0.5 X d1 X d2</p>
+          <div class="flex gap-2 justify-center mt-4 mb-2">
 
-            <input class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="b">
+            <input id="diagonal-1" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="d1">
             <span>cm</span>
-            <input class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="h">
+            <input id="diagonal-2" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="d2">
             <span>cm</span>
           </div>
+          <!-- display -->
+          <div class="mb-3">
+            <p>Area: <span id="rhombus-area"></span> cm<sup>2</sup></p>
+          </div>
           <div class="card-actions">
-            <button class="btn btn-primary w-full bg-[#1090D8] hover:bg-[#1090D8]/[.9] text-white border-none text-xl font-medium">Calculate</button>
+            <button onclick="calculateRhombus()" class="btn btn-primary w-full bg-[#1090D8] hover:bg-[#1090D8]/[.9] text-white border-none text-xl font-medium">Calculate</button>
           </div>
         </div>
       </div>
@@ -111,16 +124,21 @@
         <figure class="pt-12 px-7"><img src="./images/pentagon.png" alt="Shoes" /></figure>
         <div class="card-body">
           <h2 class="card-title justify-center text-2xl font-semibold">Pentagon</h2>
-          <p class="text-center">Area (A) = 0.5 X b X h</p>
-          <div class="flex gap-2 justify-center mt-4 mb-6">
+          <p class="text-center">Area (A) = 0.5 X p X a</p>
+          <div class="flex gap-2 justify-center mt-4 mb-2">
 
-            <input class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="b">
+            <input id="pentagon-p" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="p">
             <span>cm</span>
-            <input class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="h">
+            <!-- a = apothem -->
+            <input id="pentagon-a" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="a">
             <span>cm</span>
           </div>
+          <!-- display -->
+          <div class="mb-3">
+            <p>Area: <span id="pentagon-area"></span> cm<sup>2</sup></p>
+          </div>
           <div class="card-actions">
-            <button class="btn btn-primary w-full bg-[#1090D8] hover:bg-[#1090D8]/[.9] text-white border-none text-xl font-medium">Calculate</button>
+            <button onclick="calculatePentagon()" class="btn btn-primary w-full bg-[#1090D8] hover:bg-[#1090D8]/[.9] text-white border-none text-xl font-medium">Calculate</button>
           </div>
         </div>
       </div>
@@ -129,16 +147,20 @@
         <figure class="pt-12 px-7"><img src="./images/ellipse.png" alt="Shoes" /></figure>
         <div class="card-body">
           <h2 class="card-title justify-center text-2xl font-semibold">Ellipse</h2>
-          <p class="text-center">Area (A) = 0.5 X b X h</p>
-          <div class="flex gap-2 justify-center mt-4 mb-6">
+          <p class="text-center">Area (A) = 0.5 X a X b</p>
+          <div class="flex gap-2 justify-center mt-4 mb-2">
 
-            <input class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="b">
+            <input id="ellipse-a-axis" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="a">
             <span>cm</span>
-            <input class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="h">
+            <input id="ellipse-b-axis" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="b">
             <span>cm</span>
           </div>
+          <!-- display -->
+          <div class="mb-3">
+            <p>Area: <span id="ellipse-area"></span> cm<sup>2</sup></p>
+          </div>
           <div class="card-actions">
-            <button class="btn btn-primary w-full bg-[#1090D8] hover:bg-[#1090D8]/[.9] text-white border-none text-xl font-medium">Calculate</button>
+            <button onclick="calculateEllipse()" class="btn btn-primary w-full bg-[#1090D8] hover:bg-[#1090D8]/[.9] text-white border-none text-xl font-medium">Calculate</button>
           </div>
         </div>
       </div>
