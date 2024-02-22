@@ -37,15 +37,18 @@
         <div class="card-body">
           <h2 class="card-title justify-center text-2xl font-semibold">Triangle</h2>
           <p class="text-center">Area (A) = 0.5 X b X h</p>
-          <div class="flex gap-2 justify-center mt-4 mb-6">
+          <div class="flex gap-2 justify-center mt-4 mb-2">
 
-            <input class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="b">
+            <input id="triangleBase" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="b">
             <span>cm</span>
-            <input class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="h">
+            <input id="triangleHeight" class="w-24 bg-[#F1F1F1] px-3 py-1" type="text" placeholder="h">
             <span>cm</span>
           </div>
+          <div class="mb-3">
+            <p>Area: <span id="display-area"></span> cm<sup>2</sup></p>
+          </div>
           <div class="card-actions">
-            <button class="btn btn-primary w-full bg-[#1090D8] hover:bg-[#1090D8]/[.9] text-white border-none text-xl font-medium">Calculate</button>
+            <button onclick="calculateTriangle()" class="btn btn-primary w-full bg-[#1090D8] hover:bg-[#1090D8]/[.9] text-white border-none text-xl font-medium">Calculate</button>
           </div>
         </div>
       </div>
